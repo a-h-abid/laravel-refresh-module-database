@@ -8,6 +8,7 @@
     "refresh",
     "database"
   ],
+  "type": "library",
   "license": "MIT",
   "authors": [
     {
