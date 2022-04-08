@@ -38,7 +38,7 @@ Import the Trait to your test code. Best to import it on your base test class.
 ```php
 class ExampleTest extends TestCase
 {
-    use \AHAbid\LaravelRefreshModuleDatabase\RefreshMooduleDatabase;
+    use \AHAbid\LaravelRefreshModuleDatabase\RefreshModuleDatabase;
 }
 ```
 
