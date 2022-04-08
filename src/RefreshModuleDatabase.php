@@ -12,7 +12,7 @@ use Illuminate\Foundation\Testing\RefreshDatabaseState;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
-trait RefreshMooduleDatabase
+trait RefreshModuleDatabase
 {
     use RefreshDatabase;
 
