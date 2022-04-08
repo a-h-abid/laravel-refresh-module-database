@@ -1,0 +1,30 @@
+{
+  "name": "a-h-abid/laravel-refresh-module-database",
+  "description": "A Refresh Database trait that can be used in unit tests with any Laravel Module packages.",
+  "keywords": [
+    "laravel",
+    "modules",
+    "module",
+    "refresh",
+    "database"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ahmedul Haque Abid",
+      "email": "a_h_abid@hotmail.com",
+      "homepage": "https://a-h-abid.github.io",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "laravel/framework": ">=6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "AHAbid\\LaravelRefreshModuleDatabase\\": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

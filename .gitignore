@@ -1,0 +1,12 @@
+# IDE
+/.idea
+/.vscode
+/.vagrant
+*.sublime-project
+*.sublime-workspace
+/nbproject
+/*.code-workspace
+
+# Packages
+/node_modules
+/vendor
