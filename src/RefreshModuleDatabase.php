@@ -7,6 +7,7 @@ use AHAbid\LaravelRefreshModuleDatabase\States\MigrationSchemaCreateState;
 use AHAbid\LaravelRefreshModuleDatabase\States\RefreshModulesDatabaseState;
 use AHAbid\LaravelRefreshModuleDatabase\States\RefreshRootDatabaseState;
 use App\Console\Kernel;
+use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\RefreshDatabaseState;
 use Illuminate\Support\Facades\DB;
@@ -96,6 +97,12 @@ trait RefreshModuleDatabase
         }
 
         $this->beginDatabaseTransaction();
+        
+        try {
+            if (!$this->app->make('db.transactions')->getTransactions()->isEmpty()) {
+                DB::commit();
+            }
+        } catch (BindingResolutionException $e) {}
     }
 
     /**
