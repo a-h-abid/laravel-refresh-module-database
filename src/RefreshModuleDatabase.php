@@ -97,7 +97,7 @@ trait RefreshModuleDatabase
         }
 
         $this->beginDatabaseTransaction();
-        
+
         try {
             if (!$this->app->make('db.transactions')->getTransactions()->isEmpty()) {
                 DB::commit();
@@ -193,7 +193,7 @@ trait RefreshModuleDatabase
         }
 
         $this->artisan('migrate', [
-            '--path' => database_path('migrations'),
+            '--path' => 'database/migrations',
         ]);
 
         $this->clearConsoleArtisan();
